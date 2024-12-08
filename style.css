@@ -22,6 +22,10 @@ body {
     padding-left: 19rem;
 }
 
+p, h3 {
+    color: white;
+}
+
 h1 {
     font-size: 60px;
     color: whitesmoke;
@@ -38,13 +42,12 @@ h2 {
 /* SOLEN */
 .sun {
     position: absolute;
-    width: 750px;
-    height: 750px;
+    width: 35vw;
+    height: 100vh;
     border-radius: 50%;
     left: -30%;
-    top: 90px;
     background: #FFD029;
-    box-shadow: 0px 0px 50px 25px rgba(255, 208, 41, 0.2);
+    box-shadow: 0px 0px 50px 25px rgba(255, 208, 41, 0.2), 25px 0px 50px 25px rgba(255, 208, 41, 0.2);
 }
 
 /* PLANETER */
@@ -59,15 +62,15 @@ h2 {
 }
 
 .ring {
-position: absolute;
-width: 200px;
-height: 6px;
-right: 25%;
-top: 90px;
-border-radius: 50%;
+    position: absolute;
+    width: 12.5rem;
+    height: 0.3rem;
+    right: 25%;
+    top: 6rem;
+    border-radius: 50%;
 
-background: rgba(255, 255, 255, 0.4);
-transform: rotate(-30deg);
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(-30deg);
 
 }
 
@@ -75,55 +78,107 @@ transform: rotate(-30deg);
     border-radius: 100%;
 }
 
-.planet-1 {
+.planets:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: filter 0.5s ease
+}
+
+.mercury {
     width: 15px;
     height: 15px;
     background-color: #888888;
 }
 
-.planet-2 {
+.venus {
     width: 25px;
     height: 25px;
     background-color: #E7CDCD;
 }
 
-.planet-3 {
+.earth {
     width: 30px;
     height: 30px;
     background-color: #428ED4;
 }
 
-.planet-4 {
+.mars {
     width: 15px;
     height: 15px;
     background-color: #EF5F5F;
 }
 
-.planet-5 {
+.jupiter {
     width: 190px;
     height: 190px;
     background-color: #E29468;
 }
 
-.planet-6 {
+.saturn {
     width: 120px;
     height: 120px;
     background-color: #C7AA72;
 }
 
-.planet-7 {
+.neptune {
     width: 70px;
     height: 70px;
     background-color: #C9D4F1;
 }
 
-.planet-8 {
+.neptunus {
     width: 65px;
     height: 65px;
     background-color: #7A91A7;
 }
 
+/* OVERLAY */
+.popup-overlay {
+    background-image: url(space.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
+    display: none;
+    z-index: 1;
+}
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40rem;
+    height: 40rem;
+}
 
+/* Min info sektion */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.latin-name {
+    padding-bottom: 2rem;
+}
+
+/* Vertical linje */
+.linebreak {
+    border: 1px solid whitesmoke;
+}
+
+/* Nuvarande planet */
+.current-planet {
+    position: absolute;
+    width: 35vw;
+    height: 100vh;
+    border-radius: 50%;
+    left: -30%;
+    background: #428ED4;
+    box-shadow: 0px 0px 50px 25px rgba(77, 80, 241, 0.2), 25px 0px 50px 50px rgba(77, 80, 241, 0.2);
+}

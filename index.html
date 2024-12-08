@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Secular+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Examination JavaScript</title>
+    <title>Solsystemet Solaris</title>
 </head>
 <body>
     <header class="main-title">
@@ -15,28 +15,70 @@
         <h2>SOLARIS</h2>
     </header>
 
-    <aside class="sun"></aside>
+    <aside class="planets sun"></aside>
 
     <main class="planets-container">
-        <section class="planets planet-1"></section>
-        <section class="planets planet-2"></section>
-        <section class="planets planet-3"></section>
-        <section class="planets planet-4"></section>
-        <section class="planets planet-5"></section>
-        <section class="planets planet-6">
+        <section class="planets mercury"></section>
+        <section class="planets venus"></section>
+        <section class="planets earth"></section>
+        <section class="planets mars"></section>
+        <section class="planets jupiter"></section>
+        <section class="planets saturn">
             <section class="ring"></section>
         </section>
-        <section class="planets planet-7"></section>
-        <section class="planets planet-8"></section>
+        <section class="planets neptune"></section>
+        <section class="planets neptunus"></section>
     </main>
+
+    <!-- POPUP -->
+    <main class="popup-overlay">
+        <section class="overlay-content">
+
+          <section class="content">
+            <article>
+                <h1 class="planet-name"></h1> 
+                <h2 class="latin-name"></h2>
+                <p class="planet-info"></p>
+            </article>
+
+            <span class="linebreak"></span>
+
+            <section class="info-section">
+                <article class="section-info">
+                    <h3>OMKRETS</h3>
+                    <p class="circumference"></p>
+                </article>
+
+                <article class="section-info">
+                    <h3>KM FRÅN JORDEN</h3>
+                    <p class="distance"></p>
+                </article>
+
+                <article class="section-info">
+                    <h3>MAX TEMPERATUR</h3>
+                    <p class="temp-day"></p>
+                </article>
+
+                <article class="section-info">
+                    <h3>MIN TEMPERATUR</h3>
+                    <p class="temp-night"></p>
+                </article>
+            </section>
+
+            <span class="linebreak"></span>
+
+            <section class="section-info">
+                <h3>MÅNAR</h3>
+                <p class="moons-info"></p>
+            </section>
+
+          </section>
+        </section>
+
+        <aside class="current-planet"></aside>
+    </main>    
     
-    
 
-
-
-
-
-
-    <script src="src/script.js"></script>
+    <script type="module" src="src/script.js"></script>
 </body>
 </html>
